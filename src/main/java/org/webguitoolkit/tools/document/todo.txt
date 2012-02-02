@@ -1,0 +1,5 @@
+- Implementing DB backed store
+- Provide properties for resources; use aspects for change recognition
+- Basic search capabilities on properties
+- Implement JackRabbit based store
+- Access manager for SSO 

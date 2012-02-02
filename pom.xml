@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>org.webguitoolkit.maven</groupId>
+		<artifactId>wgt-project-template</artifactId>
+		<version>01.00.00</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.webguitoolkit.tools.document
+	</groupId>
+
+	<artifactId>eh-document_store</artifactId>
+	<name>DocumentStore</name>
+	<version>01.01.05</version>
+
+	<developers>
+		<developer>
+			<id>zaretzkep</id>
+			<name>Peter Zaretzke</name>
+			<email>Peter@17sprints.de
+			</email>
+		</developer>
+		<developer>
+			<id>dreiert</id>
+			<name>Dreier Timo</name>
+			<email>timo.dreier@infoserve.endress.com
+			</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>
+			scm:svn:http://isw600.infoserve.endress.com/svn/Utils/DocumentStore/tags/eh-document_store-01.01.05
+		</connection>
+		<developerConnection>
+			scm:svn:http://isw600.infoserve.endress.com/svn/Utils/DocumentStore/tags/eh-document_store-01.01.05
+		</developerConnection>
+		<url>scm:svn:http://isw600.infoserve.endress.com/svn/Utils/DocumentStore/tags/eh-document_store-01.01.05</url>
+	</scm>
+
+	<organization>
+		<name>Endress+Hauser Infoserve</name>
+		<url>http://infoserve.endress.com</url>
+	</organization>
+
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.12</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.webguitoolkit.messagebox</groupId>
+			<artifactId>wgt-messagebox</artifactId>
+			<version>01.00.01-SNAPSHOT</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+			<optional>false</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>slide</groupId>
+			<artifactId>slide-webdavlib-httpclient3</artifactId>
+			<version>2.1</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.0.4</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.4</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-discovery</groupId>
+			<artifactId>commons-discovery</artifactId>
+			<version>0.2</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+			<version>1.6.1</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.xml</groupId>
+			<artifactId>jaxrpc-api</artifactId>
+			<version>1.1</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.0</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>axis</groupId>
+			<artifactId>axis</artifactId>
+			<version>1.4</version>
+			<type>jar</type>
+			<optional>false</optional>
+		</dependency>
+		
+	</dependencies>
+
+	<properties>
+		<prop.test.skip>false</prop.test.skip>
+		<prop.jar.skipTestjar>false</prop.jar.skipTestjar>
+		<prop.project.group>Utils</prop.project.group>
+		<prop.project.name>${project.name}</prop.project.name>
+		<prop.java.targetversion>1.6</prop.java.targetversion>
+		<prop.project.root.dir>${basedir}</prop.project.root.dir>
+		<prop.javadoc.attach-javadocs>true</prop.javadoc.attach-javadocs>
+		<prop.java.sourceversion>1.6</prop.java.sourceversion>
+		<prop.site.generateReports>true</prop.site.generateReports>
+		<prop.source.generateSourceJar>true</prop.source.generateSourceJar>
+		<prop.aspectj.excludes>**/*</prop.aspectj.excludes>
+	</properties>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-changes-plugin</artifactId>
+				<configuration>
+					<issueLinkTemplate>http://isw600.infoserve.endress.com:70/redmine/issues/show/%ISSUE%</issueLinkTemplate>
+					<toAddresses>
+						<toAddress implementation="java.lang.String">wolfram.kaiser@infoserve.endress.com</toAddress>
+						<toAddress implementation="java.lang.String">timo.dreier@infoserve.endress.com</toAddress>
+						<toAddress implementation="java.lang.String">peter.zaretzke@infoserve.endress.com</toAddress>
+						<toAddress implementation="java.lang.String">jochen.gugel@infoserve.endress.com</toAddress>
+					</toAddresses>
+				</configuration>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>changes-report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<configuration>
+					<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+					<dependencyDetailsEnabled>false</dependencyDetailsEnabled>
+				</configuration>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>index</report>
+							<report>project-team</report>
+							<report>issue-tracking</report>
+							<report>scm</report>
+							<report>dependencies</report>
+							<report>cim</report>
+							<report>summary</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<artifactId>maven-changelog-plugin</artifactId>
+				<reportSets>
+					<reportSet>
+						<id>dual-report</id>
+						<configuration>
+							<type>range</type>
+							<range>180</range>
+							<displayFileDetailUrl>http://isw600.infoserve.endress.com/svn/%FILE%</displayFileDetailUrl>
+						</configuration>
+						<reports>
+							<report>dev-activity</report>
+							<report>file-activity</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>taglist-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
+</project>

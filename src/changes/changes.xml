@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+   <properties>
+      <title>DocumentStore</title>
+      <author email="peter.zaretzke@infoserve.endress.com">Peter Zaretzke</author>
+   </properties>
+<!-- 
+The following attributes are supported for the <release> element:
+
+version			Required	Name of the version in which the changes occur. For each change, add a nested <action> element as described below.
+date			Required	Date at which the version was released. You can use a free form comment such as "in SVN" for unreleased versions.
+description		Optional	An optional description of the release. This is used in the overview table of releases. Note: In releases prior to 2.0-beta-2 this was called desc. It was changed to improve compatibility with the Maven 1 changes plugin.
+
+The following attributes are supported for the <action> element:
+
+dev				Required	Name of developer who committed the change. This must be the name of the developer as described in the developers section of the pom.xml file.
+type			Required	Type of change. There are four valid values: add, fix, remove, update.
+issue			Optional	Id of the issue related to this change. This is the id in your issue tracking system.
+							The Changes plugin will generate a URL out of this id. The URL is constructed using the value of the issueLinkTemplate parameter. See the changes-report mojo for more details.
+due-to			Optional	Name of the person to be credited for this change. This can be used when a patch is submitted by a non-committer.
+due-to-email	Optional	Email of the person to be credited for this change.
+ -->
+   <body>
+      <release version="01.01.03" date="2010-07-29" description="Release">    
+          <action dev="gugelj" type="add" date="2010-07-28">
+            implement the methods getContent, createDirectory, createFile of WebdavProxy implementation
+          </action>
+      </release>
+      <release version="0.9.6" date="2009-03-19" description="First Realease">    
+          <action dev="hermannm" type="add" date="2009-03-13">
+            Added changes and site generation.
+          </action>
+      </release>
+   </body>
+</document>
