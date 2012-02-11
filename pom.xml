@@ -11,7 +11,7 @@
 	
 	<groupId>org.webguitoolkit.tools</groupId>
 	<artifactId>wgt-documentstore</artifactId>
-	<name>DocumentStore</name>
+	<name>wgt-documentstore</name>
 	<version>01.01.05</version>
 
 	<developers>
