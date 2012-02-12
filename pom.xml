@@ -8,7 +8,7 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<groupId>org.webguitoolkit.tools</groupId>
 	<artifactId>wgt-documentstore</artifactId>
 	<name>wgt-documentstore</name>
@@ -82,13 +82,8 @@
 			<optional>false</optional>
 		</dependency>
 
-		<dependency>
-			<groupId>slide</groupId>
-			<artifactId>slide-webdavlib-httpclient3</artifactId>
-			<version>2.1</version>
-			<type>jar</type>
-			<optional>false</optional>
-		</dependency>
+		<!-- dependency> <groupId>slide</groupId> <artifactId>slide-webdavlib-httpclient3</artifactId> 
+			<version>2.1</version> <type>jar</type> <optional>false</optional> </dependency -->
 
 		<dependency>
 			<groupId>commons-logging</groupId>
